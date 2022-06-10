@@ -34,6 +34,7 @@ class SceneGenerator {
 		const photoCatScene = new Scenes.BaseScene('photoCatScene');
 		photoCatScene.enter(async ctx => {
 			await photoCats(ctx);
+			await ctx.scene.leave();
 		});
 		return photoCatScene;
 	}
@@ -42,6 +43,7 @@ class SceneGenerator {
 		const whoAmIScene = new Scenes.BaseScene('whoAmIScene');
 		whoAmIScene.enter(async ctx => {
 			await whoAmI(ctx);
+			await ctx.scene.leave();
 		});
 		return whoAmIScene;
 	}
@@ -50,6 +52,7 @@ class SceneGenerator {
 		const cursCardsBBScene = new Scenes.BaseScene('cursCardsBBScene');
 		cursCardsBBScene.enter(async ctx => {
 			await cursCardsBB(ctx);
+			await ctx.scene.leave();
 		});
 		return cursCardsBBScene;
 	}
